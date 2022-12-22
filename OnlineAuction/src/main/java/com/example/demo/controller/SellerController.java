@@ -80,6 +80,7 @@ public class SellerController {
 		seller.setProductPrice(null);
 		seller.setProductBiddingdate(null);
 		seller.setProductCategory(null);
+		seller.setBiddedBy(null);
 		Seller updatedProduct = sellerRepo.save(seller);
 		return ResponseEntity.ok(updatedProduct);
 	}
