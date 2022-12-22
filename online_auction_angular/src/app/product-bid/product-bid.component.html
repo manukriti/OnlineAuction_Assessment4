@@ -1,0 +1,42 @@
+<div class="container">
+    <h3 style="margin-bottom:25px; margin-top:15px">Product List</h3>
+    <table class="table table-stripped">
+        <thead>
+            <tr>
+                <th>Seller ID</th>
+                <th>Seller Name</th>
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Description</th>
+                <th>Start Amount</th>
+                <th>Price</th>
+                <th>Bidding Date</th>
+                <th>Category</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody *ngFor = "let seller of sellers">
+            <tr  *ngIf=" seller.productID">
+                
+                <td>{{seller.sellerID}}</td>
+                <td>{{seller.sellerName}}</td>
+                <td>{{seller.productID}}</td>
+                <td>{{seller.productName}}</td>
+                <td>{{seller.productDescription}}</td>
+                <td>{{seller.productStartamt}}</td>
+                <td>{{seller.productPrice}}</td>
+                <td>{{seller.productBiddingdate}}</td>
+                <td>{{seller.productCategory}}</td>
+                <td>
+                    <button (click)=" productDeletion(seller.sellerID)" class="btn btn-danger">Delete</button>
+                </td>
+                <td>
+                    <button (click)=" viewProduct(seller.sellerID)" class="btn btn-info">View </button>
+                </td>
+                <td >
+                    <button  (click)=" bidTheProduct(seller.sellerID)" value = "updated" class="btn btn-success" >Bid </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </div>

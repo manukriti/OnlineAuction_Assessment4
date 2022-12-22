@@ -1,0 +1,37 @@
+<html>
+<body >
+<div class="container">
+<h3 style="margin-bottom:25px; margin-top:15px">Seller List</h3>
+<table class="table table-stripped">
+    <thead>
+        <tr>
+            <th>Seller ID</th>
+            <th>Seller Name</th>
+            <th>Seller Email</th>
+            <th>Seller Address</th>
+            <th>Seller Phone No</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let seller of sellers">
+            <td>{{seller.sellerID}}</td>
+            <td>{{seller.sellerName}}</td>
+            <td>{{seller.sellerEmail}}</td>
+            <td>{{seller.sellerAddress}}</td>
+            <td>{{seller.sellerNumber}}</td>
+            <td>
+                <button (click)="updateProduct(seller.sellerID)" class="btn btn-success">Add Product</button>
+            </td>
+            <td>
+                <button (click)="deleteTheSeller(seller.sellerID)" class="btn btn-danger">Delete Seller</button>
+            </td>
+            <td>
+                <button (click)="viewTheSeller(seller.sellerID)" class="btn btn-info">View Seller</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</body>
+</html>

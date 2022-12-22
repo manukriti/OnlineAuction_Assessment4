@@ -1,0 +1,45 @@
+<div class="col-md-6 offset-md-3">
+    <h3 >Add Product</h3>
+    <form (ngSubmit)="onSubmit()">
+        <!-- <div class="form-group">
+            <label>Seller ID</label>
+            <input type="text" class="form-control" id="sid" [(ngModel)]="seller.sellerID" name="sid" required>
+        </div> -->
+        <div class="form-group">
+            <label>Product ID</label>
+            <input type="text" class="form-control" id="pid" [(ngModel)]="seller.productID" name="pid" required>
+        </div>
+        <div class="form-group">
+            <label>Product Name</label>
+            <input type="text" class="form-control" id="pname" [(ngModel)]="seller.productName" name="pname" required>
+        </div>
+        <div class="form-group">
+            <label>Description</label>
+            <input type="text" class="form-control" id="desc" [(ngModel)]="seller.productDescription" name="desc" required>
+        </div>
+        <div class="form-group">
+            <label>Start Amount</label>
+            <input type="text" class="form-control" id="startamt" [(ngModel)]="seller.productStartamt" name="startamt" required>
+        </div>
+        <div class="form-group">
+            <label>Price</label>
+            <input type="text" class="form-control" id="price" [(ngModel)]="seller.productPrice" name="price" required>
+        </div>
+        <div class="form-group">
+            <label>Bidding Date</label>
+            <input type="date" class="form-control datepicker" id="date" [(ngModel)]="seller.productBiddingdate" name="date"  required>
+           
+        </div>
+         <div class="form-group">
+            <label>Product Category</label>
+            <select class="form-control" id="category" [(ngModel)]="seller.productCategory" name="category" required>
+                <option value="Mobiles">Mobiles</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Clothing">Clothing</option>
+                <option value="Home">Home</option>
+            </select>
+        </div>
+        <button class="btn btn-success" style="margin-top: 12px;" type="submit">Add</button>
+    </form>
+    </div>
+   
